@@ -2,63 +2,12 @@
     <head>
         <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link rel="style" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="index.js"></script>
     <title>Random Quote Machine</title>
-        <script>
-            const QUOTEBANK = [
-                {
-                    quote:" “Take risks in your life, If you win, you can lead! If you loose, you can guide!",
-                    author :"Swami Vivekananda"
-                }, {
-                    quote:" “Strength is life; weakness is death.”",
-                    author:"Swami Vivekanand" 
-                 }, {
-                    quote:"“Experience is the only teacher we have. we may talk and reason all our lives, but we shall not understand a word of truth.”",
-                    author:"Swami Vivekanand"
-                 },{
-                    quote:"Take up one idea. Make that one idea your life - think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body, be full of that idea, and just leave every other idea alone. This is the way to success.",
-                    author:"Swami Vivekanand"
-                 },{
-                    quote:"“Take up one idea, make that one idea your life. Think of it, dream of it, Live on that idea let the brain, muscles, nerves, every part of your body be full of that idea, and just leave every other idea alone. This is the way to success.”",
-                    author:"Swami Vivekanand"
-                 },{
-                    quote:"“Learn everything that is good from others, but bring it in, and in your own way adsorb it; do not become others.”",
-                    author:"Swami Vivekanand"
-                 }
-                    
-                
-                    
-            ];
-            window.onload= init;
-            function init(){
-                 generateQuote()
-                }
-                function generateQuote(){
-                    let quoteSize= QUOTEBANK.length;
-                    let randomIndex= Math.floor(Math.random()*quoteSize);
-                    let randomQuoteData=QUOTEBANK[randomIndex];
-                    let twitterlink= "https://twitter.com/intent/tweet?text=quotegoeshere"
-                    let quoteInApiFormat=randomQuoteData.quote.replace(/ /g,"%20");
-                    twitterlink+=quoteInApiFormat;
-                    let authorInApiFormat=randomQuoteData.quote.replace(/ /g,"%20");
-                    twitterlink+=authorInApiFormat;
-                    document.getElementById("tweet-quote").href=twitterlink;
-                document.getElementById("text").innerText= randomQuoteData.quote;
-                document.getElementById("author").innerText=randomQuoteData.author;
-                
+        
 
-            }
-        </script>
-<style >
-    *{
-        text-align:center;
-    }
-    #quote-box{
-       text-align: center;
-    }
-</style>
         
     </head>
     <body>
@@ -79,7 +28,7 @@
                   </p>
                   
                   <button id="new-quote" onclick="generateQuote();"class="btn btn-block btn-success">New Quote</button>
-                  <a href="#" id="tweet-quote" target="_top" class="btn btn-block btn-primary ">Tweet Quote</a>
+                  <a href="#" id="tweet-quote" target="_blank" class="btn btn-block btn-primary ">Tweet Quote</a>
                 </div>
               </div>
             
@@ -91,8 +40,9 @@
            </div> 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-           <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+        
+        
 
     </body>
 </html>
